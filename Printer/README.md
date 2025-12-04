@@ -2,6 +2,7 @@ First printer troubleshooting
 
 ***
 
+
 ## 🖨️ Tech Support Project: Wireless Printer Connectivity Issue
 
 **Issue:** Brother HL-2395DW printer not printing from a MacBook Air.
@@ -16,7 +17,7 @@ Verify fundamental connectivity, aligning with **CompTIA A+** foundational check
 * **Printer Status Check:**
     * Confirm the printer's power is **ON**.
     * Verify the printer is connected to the **LAN/WLAN** (Look for the Wi-Fi icon or indicator light).
-    * On the printer display, check the current **IP Address** and confirm it is within the same subnet as the MacBook Air (e.g., $192.168.1.x$).
+    * On the printer display, check the current **IP Address** and confirm it is within the same subnet as the MacBook Air ($192.168.1.x$).
 * **Client Status Check:**
     * Confirm the MacBook Air's Wi-Fi is connected to the **same SSID** (network name) as the printer.
 
@@ -32,7 +33,7 @@ Examine the client-side software configuration for common issues.
     * Check for any specific error messages (e.g., authentication failure, driver mismatch).
 * **Critical Settings to Examine:**
     * **Driver/Software:** Verify the correct Brother HL-2395DW driver (or the generic AirPrint driver) is selected.
-    * **Port/Protocol:** Ensure the printer connection uses the correct protocol (e.g., **Bonjour/AirPrint** or **LPD**).
+    * **Port/Protocol:** Ensure the printer connection uses the correct protocol (**AirPrint**).
     * **IP Address:** Verify the printer entry uses the correct IP address obtained in Step 1.
 
 ---
@@ -50,6 +51,3 @@ Execute necessary clearing and setting steps.
 ### 4. ✅ Resolution
 
 * A test page was successfully printed from the MacBook Air, confirming the issue was resolved (likely a network registration or stuck queue job cleared by the power cycle).
-
----
-Would you like to detail another tech support project for your GitHub portfolio?
