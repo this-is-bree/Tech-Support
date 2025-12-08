@@ -9,4 +9,4 @@ Navigate to the 'Printer' folder for additional details.
 
 ---
 
-### 2. 💻 Install a SOHO mesh wireless system
+### 2. 💻 Install a SOHO wireless system
