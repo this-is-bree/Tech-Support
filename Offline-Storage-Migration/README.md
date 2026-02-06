@@ -1,0 +1,1 @@
+Successfully consolidated 20+ disparate physical volumes into a single, high-integrity 24TB storage environment. This project utilized hash-based deduplication (MD5), virtual indexing to minimize hardware overhead, and checksum verification to ensure 100% data fidelity across the migration.
