@@ -129,17 +129,5 @@ Each phase folder contains detailed documentation, configuration files, and scri
 
 ---
 
-## 📄 License
-
-MIT License - Documentation freely adaptable for similar projects
-
----
-
-## 👤 Contact
-
-February 2025 | Help Desk / General IT Portfolio Project
-
----
-
 **Project Started:** February 2025  
 **Last Updated:** February 6, 2025
