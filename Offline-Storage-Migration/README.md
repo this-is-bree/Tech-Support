@@ -23,7 +23,7 @@ Catalog-first workflow using checksums to analyze offline drives, determine true
 
 ## 📁 Project Phases
 
-### [Phase 1: Cataloging & Inventory](./01-cataloging/) 
+### [Phase 1: Cataloging & Inventory](./01-Cataloging/) 
 **Status:** 🟡 In Progress (9/20+ drives, 5TB indexed)
 - Index all drives with MD5 checksums using NeoFinder
 - Create searchable offline inventory
