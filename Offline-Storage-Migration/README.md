@@ -2,7 +2,7 @@
 
 ![Project Status](https://img.shields.io/badge/status-in%20progress-yellow)
 ![Phase](https://img.shields.io/badge/phase-1%20cataloging-blue)
-![Data Processed](https://img.shields.io/badge/cataloged-5TB%20%2F%2020%2B%20drives-green)
+![Data Processed](https://img.shields.io/badge/cataloged-6.6TB%20%2F%2020%2B%20drives-green)
 
 Systematic consolidation of 20+ legacy hard drives (1990s-present) into a single organized archive with verified backups, using catalog-based deduplication to minimize storage costs.
 
@@ -24,10 +24,11 @@ Catalog-first workflow using checksums to analyze offline drives, determine true
 ## 📁 Project Phases
 
 ### [Phase 1: Cataloging & Inventory](./01-Cataloging/) 
-**Status:** 🟡 In Progress (9/20+ drives, 5TB indexed)
+**Status:** 🟡 In Progress (9.5/20+ drives, 6.64TB indexed)
 - Index all drives with MD5 checksums using NeoFinder
 - Create searchable offline inventory
 - Document drive conditions and content types
+- Handle failing/problematic drives
 
 ### [Phase 2: Capacity Planning](./02-capacity-planning/)
 **Status:** ⚪ Not Started
@@ -62,28 +63,36 @@ Catalog-first workflow using checksums to analyze offline drives, determine true
 
 ## 💼 Skills Demonstrated
 
-**Technical:** Data integrity (checksums), storage management, macOS administration, bash scripting, backup/recovery procedures
+**Technical:** Data integrity (checksums), storage management, macOS administration, bash scripting, backup/recovery procedures, hardware troubleshooting, data recovery
 
-**Process:** Project planning, risk management, documentation, cost optimization, problem-solving under constraints
+**Process:** Project planning, risk management, documentation, cost optimization, problem-solving under constraints, adapting to hardware failures
 
 ---
 
 ## 📊 Current Progress
 
-**Updated:** February 6, 2025
+**Updated:** February 6, 2025 (evening)
 
 **Phase 1 Status:**
-- Drives cataloged: 9 of 20+
-- Data indexed: 5TB (estimated 15-20TB total)
-- Cataloging rate: ~0.5-1TB/hour
+- Drives successfully cataloged: 9 complete
+- Currently cataloging: Drive #10 (in progress)
+- Data indexed: 6.64TB (6,641.81 GB)
+- Cataloging rate: ~0.5-1TB/hour (healthy drives)
 - Oldest data found: 1990s
 
+**Hardware Issues Encountered:**
+- 1 drive: Failed mid-catalog (read-only, 3 files unrecoverable)
+- 1 drive: Won't connect at all
+- 1 drive: Consistently disconnects during cataloging
+- Total problematic drives: 3 of 10 attempted (30% failure rate)
+
 **Key Findings:**
+- Drive failure rate higher than expected (aging hardware risk)
 - Multiple backup generations discovered (high duplicate likelihood)
 - Overlapping time periods across drives (2010-2015 on 3+ drives)
-- Some aging drives showing slow read speeds (priority migration candidates)
+- Hardware failures reinforce urgency of this consolidation project
 
-**Next Milestone:** Complete all drive cataloging
+**Next Milestone:** Complete cataloging of accessible drives, document failed drives for data recovery assessment
 
 ---
 
@@ -106,17 +115,26 @@ Each phase folder contains detailed documentation, configuration files, and scri
 **What's Working:**
 - NeoFinder's checksums enable true offline duplicate detection
 - Clear drive labeling during cataloging saves significant time
-- Parallel spreadsheet tracking helps monitor progress
+- Parallel spreadsheet tracking helps monitor progress and drive health
 
 **Challenges:**
+- **30% hardware failure rate** - higher than anticipated, validates project urgency
 - USB 2.0 drives significantly slower (3-4x longer cataloging time)
 - Mixed file systems require different handling approaches
-- Powered USB hub essential for safely connecting multiple drives
+- Powered USB hub essential but doesn't solve all connection issues
+- Some drives too degraded for reliable cataloging
 
-**Adaptations:**
-- Processing faster drives first to build momentum
-- Running slow drives overnight
-- Prioritizing aging/failing drives for early migration
+**Critical Adaptations:**
+- Immediately backing up failing drives even with incomplete catalogs
+- Documenting which specific files failed for data recovery assessment
+- Prioritizing all remaining uncataloged drives (any could fail next)
+- Accepting some data loss as inevitable with 30-year-old media
+
+**Hardware Failure Lessons:**
+- Read-only errors indicate imminent drive death
+- Consistent disconnects suggest USB controller or power issues
+- Complete connection failure could be drive electronics or enclosure
+- Time is enemy - every delay increases data loss risk
 
 ---
 
@@ -126,8 +144,9 @@ Each phase folder contains detailed documentation, configuration files, and scri
 - Implement automated backup schedule post-migration
 - Consider NAS solution for network-accessible archive at scale
 - Add selective cloud backup tier for critical files only
+- Budget for professional data recovery services for critical failed drives
 
 ---
 
 **Project Started:** February 2025  
-**Last Updated:** February 6, 2025
+**Last Updated:** February 6, 2025 
