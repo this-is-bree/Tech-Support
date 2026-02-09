@@ -1,7 +1,7 @@
 # Phase 1: Cataloging & Inventory
 
 ![Phase Status](https://img.shields.io/badge/status-in%20progress-yellow)
-![Drives Cataloged](https://img.shields.io/badge/drives-12%20%2F%3020%2B-blue)
+![Drives Cataloged](https://img.shields.io/badge/drives-12%20%2F%2030%2B-blue)
 ![Data Indexed](https://img.shields.io/badge/indexed-14.5TB-green)
 ![Hardware Issues](https://img.shields.io/badge/failed%20drives-3-red)
 
