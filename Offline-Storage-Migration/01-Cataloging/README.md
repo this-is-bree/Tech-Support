@@ -1,8 +1,8 @@
 # Phase 1: Cataloging & Inventory
 
 ![Phase Status](https://img.shields.io/badge/status-in%20progress-yellow)
-![Drives Cataloged](https://img.shields.io/badge/drives-9.5%20%2F%2020%2B-blue)
-![Data Indexed](https://img.shields.io/badge/indexed-6.64TB-green)
+![Drives Cataloged](https://img.shields.io/badge/drives-12%20%2F%2020%2B-blue)
+![Data Indexed](https://img.shields.io/badge/indexed-14.5TB-green)
 ![Hardware Issues](https://img.shields.io/badge/failed%20drives-3-red)
 
 **Objective:** Create a complete searchable inventory of all files across 20+ drives without moving or modifying original data.
@@ -73,7 +73,7 @@ touch drive-inventory.csv
 
 ### Per-Drive Process
 
-**For each of the 20+ drives:**
+**For each of the 30+ drives:**
 
 #### 1. Physical Connection
 - Connect drive to Mac via powered USB hub (prevents bus overload)
@@ -395,21 +395,21 @@ Data not critical → Document and move on
 
 ## 📊 Interim Results
 
-**Updated:** February 6, 2025 (evening)
+**Updated:** February 8, 2025 (evening)
 
 ### Cataloging Progress
 
-**Drives Completed:** 9 full catalogs  
-**Drives In Progress:** 1 (Drive #10)  
-**Total Data Cataloged:** 6.64TB (6,641.81 GB)  
-**Files Indexed:** ~220,000-250,000 (estimated)  
-**Average Time per Drive:** ~1.5 hours (healthy drives only)  
+**Drives Completed:** 12 full catalogs  
+**Drives In Progress:** 1 (Drive #13)  
+**Total Data Cataloged:** 14.5TB (14,525.11 GB)  
+**Files Indexed:** ~4,000,000 (estimated)  
+**Average Time per Drive:** ~2 hours (healthy drives only)  
 **Time Lost to Failures:** ~8 hours (troubleshooting, attempts, recovery)
 
 ### Hardware Failure Statistics
 
-**Total Drives Attempted:** 10  
-**Successful Catalogs:** 9 complete  
+**Total Drives Attempted:** 14  
+**Successful Catalogs:** 12 complete  
 **Partial Catalogs:** 1 (missing 3 files due to read errors)  
 **Failed - Unstable:** 1 (consistent disconnects)  
 **Failed - Dead:** 1 (won't connect)  
@@ -453,7 +453,7 @@ Are the 3 unrecoverable files unique, or do duplicates exist on other drives? Du
 
 **Estimated Duplicate Rate:** 40-60% (typical for backup-heavy collections)
 
-This means 6.64TB cataloged might contain only 3-4TB unique data.
+This means 14.5TB cataloged might contain only 3-4TB unique data.
 
 ### Drive Health Assessment
 
