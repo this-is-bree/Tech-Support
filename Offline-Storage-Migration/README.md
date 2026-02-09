@@ -2,7 +2,7 @@
 
 ![Project Status](https://img.shields.io/badge/status-in%20progress-yellow)
 ![Phase](https://img.shields.io/badge/phase-1%20cataloging-blue)
-![Data Processed](https://img.shields.io/badge/cataloged-6.6TB%20%2F%2020%2B%20drives-green)
+![Data Processed](https://img.shields.io/badge/cataloged-14.5TB%20%2F%2020%2B%20drives-green)
 
 Systematic consolidation of 20+ legacy hard drives (1990s-present) into a single organized archive with verified backups, using catalog-based deduplication to minimize storage costs.
 
