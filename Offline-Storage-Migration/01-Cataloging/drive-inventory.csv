@@ -1,0 +1,16 @@
+Drive#,Content Type,Capacity,Used Space,Unique (GB),Files,Date Range,Duplicate %,Status
+01,Time Machine,2TB,1.9TB,45.2,125430,2012-2015,95%,Complete
+02,Photos,1TB,980GB,312.5,45623,2010-2014,68%,Complete
+03,Videos,1TB,920GB,890.1,3421,2013-2016,3%,Complete
+04,Photos,500GB,480GB,89.3,23401,2009-2012,81%,Complete
+05,Videos,2TB,1.8TB,1620.4,5234,2015-2018,10%,Complete
+06,Misc,1TB,850GB,201.8,18923,2008-2013,76%,Complete
+07,Photos,1TB,990GB,78.9,31245,2011-2015,92%,Partial - 3 files lost
+08,Photos,750GB,720GB,42.1,28634,2010-2013,94%,Complete
+09,Files,1TB,880GB,156.7,42389,2007-2011,82%,Complete
+10,Misc,2TB,1.7TB,423.8,52341,2014-2017,75%,Complete
+11,Photos,500GB,495GB,31.2,19823,2012-2014,94%,Complete
+12,Photos,1TB,950GB,67.4,35672,2013-2016,93%,Complete
+13-33,Pending,3-4TB each,TBD,TBD,TBD,2018-present,TBD,Not Started
+
+TOTALS (12 drives):,14.5TB,2.9TB unique,~550k files,2007-2018,80% avg duplicate rate
