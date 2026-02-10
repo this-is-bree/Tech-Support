@@ -2,151 +2,152 @@
 
 ![Project Status](https://img.shields.io/badge/status-in%20progress-yellow)
 ![Phase](https://img.shields.io/badge/phase-1%20cataloging-blue)
-![Data Processed](https://img.shields.io/badge/cataloged-14.5TB%20%2F%2020%2B%20drives-green)
+![Data Processed](https://img.shields.io/badge/cataloged-14.5TB%20%2F%2033%2B%20drives-green)
+![Deduplication](https://img.shields.io/badge/duplicate%20rate-80%25-red)
 
-Systematic consolidation of 20+ legacy hard drives (1990s-present) into a single organized archive with verified backups, using catalog-based deduplication to minimize storage costs.
+Systematic consolidation of 33+ legacy hard drives (2007-present, with older archives pending) into a single organized archive with verified backups, using catalog-based deduplication to minimize storage costs.
+
+## 📋 Table of Contents
+- [Challenge](#challenge)
+- [Technical Approach](#technical-approach)
+- [Project Phases](#project-phases)
+- [Current Progress](#current-progress)
+- [Key Findings](#key-findings)
+- [Tools Used](#tools-used)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Repository Structure](#repository-structure)
+- [Lessons Learned](#lessons-learned)
 
 ---
 
 ## 🎯 Challenge
 
-**Problem:**
-Over 20 external hard drives accumulated across 30+ years with unknown duplicate rates, inconsistent organization, and no centralized inventory. Cloud storage costs for 15-20TB+ are prohibitive, and purchasing hardware before knowing actual storage needs risks overspending.
+**Problem Statement:**
+Over 33 external hard drives accumulated across 15+ years (2007-present, with additional pre-2007 archives) containing mixed data types with:
+- Unknown duplicate rates across drives (now confirmed at ~80%)
+- Inconsistent file organization and naming conventions
+- Multiple Time Machine backups creating massive redundancy
+- No centralized inventory or searchable index
+- Risk of data loss from aging hardware (30% failure rate encountered)
+- Prohibitive cloud storage costs for 15-20TB+ initial consolidation
 
 **Goal:**
-Consolidate into a single organized archive with verified backup while eliminating duplicates and maintaining data integrity throughout migration.
+Consolidate all data into a single organized archive with verified backup while:
+- Eliminating duplicates to minimize final storage requirements (expecting 60-80% reduction)
+- Avoiding upfront hardware investment before knowing actual storage needs
+- Maintaining data integrity throughout migration
+- Creating a repeatable, documented process
+- Providing client with usable file architecture during lengthy cataloging phase
 
-**Approach:**
-Catalog-first workflow using checksums to analyze offline drives, determine true storage needs, then purchase appropriately-sized hardware.
+**Constraints:**
+- Mac-only workflow (no Windows/Linux tools)
+- No cloud dependency for primary workflow (bandwidth/cost)
+- Must work with offline drives (can't have all 33+ connected simultaneously)
+- Limited staging space for intermediate processing
+- Client needs access to organized structure before completion
+
+---
+
+## 🔧 Technical Approach
+
+### Strategy Overview
+
+**Catalog-First Workflow:**
+1. **Catalog Before Purchase** - Index all drives with MD5 checksums to determine actual storage needs
+2. **Content-Based Deduplication** - Use checksums to identify true duplicates regardless of filename/location
+3. **Parallel Client Workflow** - Provide sample organized structure for client use during ongoing cataloging
+4. **Staged Migration** - Process drives in batches using temporary staging area after cataloging complete
+5. **Verified Backup** - Clone final archive with byte-level verification
+
+### Why This Approach?
+
+- ✅ **Reveals true storage needs:** 14.5TB cataloged → 2.9TB unique (80% duplicate rate confirmed)
+- ✅ **Reduces risk:** Originals untouched until verified
+- ✅ **Enables offline duplicate detection** across 33+ unmounted drives
+- ✅ **Provides early value to client** via sample file architecture
+- ✅ **Documents entire process** for repeatability and portfolio demonstration
 
 ---
 
 ## 📁 Project Phases
 
-### [Phase 1: Cataloging & Inventory](./01-Cataloging/) 
-**Status:** 🟡 In Progress (12/30+ drives, 14.5TB indexed)
-- Index all drives with MD5 checksums using NeoFinder
-- Create searchable offline inventory
-- Document drive conditions and content types
-- Handle failing/problematic drives
+### [Phase 1: Cataloging & Inventory](./01-cataloging/) 
+**Status:** 🟡 In Progress (12/33+ drives, 14.5TB indexed)
+
+- Catalog all drives with MD5 checksums using NeoFinder
+- Create searchable inventory of all files across offline volumes
+- Document drive conditions and handle hardware failures
+- Identify duplicate rates and estimate final storage needs
+- Provide sample file architecture to client for early workflow testing
+- **Current Progress:** 80% duplicate rate discovered (14.5TB → 2.9TB unique)
+
+---
 
 ### [Phase 2: Capacity Planning](./02-capacity-planning/)
-**Status:** ⚪ Not Started
-- Run cross-catalog duplicate analysis
-- Calculate storage needs: `(Total - Duplicates - Junk) × 1.3`
-- Select appropriate hardware
+**Status:** ⚪ Not Started (awaiting completion of cataloging)
+
+- Run comprehensive cross-catalog duplicate analysis on all 33+ drives
+- Calculate final storage requirements: `(Total Raw - Duplicates - Time Machine - Junk) × 1.3`
+- Estimate: ~15-20TB raw → ~3-5TB unique (based on current 80% dedup rate)
+- Select appropriate hardware based on deduplication results
+- **Deliverable:** Final storage requirement calculation and hardware purchase decision
+
+---
 
 ### [Phase 3: Deduplication & Consolidation](./03-deduplication/)
 **Status:** ⚪ Not Started
-- Set up staging workflow
-- Process drives iteratively: copy → dedupe → organize
-- Build final organized structure
+
+- Set up staging workflow on final drive
+- Process drives iteratively: copy → dedupe → organize → verify
+- Resolve duplicate conflicts (keep newest/highest quality version)
+- Build final organized folder structure based on client-tested architecture
+- **Deliverable:** Single consolidated archive with all unique files in organized structure
+
+---
 
 ### [Phase 4: Backup & Verification](./04-backup-verification/)
 **Status:** ⚪ Not Started
-- Clone final drive with Carbon Copy Cloner
-- Verify integrity with checksum validation
+
+- Clone final drive using Carbon Copy Cloner with verification
+- Verify backup integrity with checksum validation
+- Test recovery process
 - Document recovery procedures
-
----
-
-## 🛠️ Tools Used
-
-| Tool | Purpose | Why Selected |
-|------|---------|--------------|
-| **NeoFinder** | Drive cataloging | MD5 checksums, offline search, virtual folder planning |
-| **dupeGuru** | Deduplication | Hash-based matching, cross-folder comparison |
-| **Carbon Copy Cloner** | Backup | Byte-level verification, bootable clones |
-| **macOS Terminal** | Automation | Batch operations, verification scripts |
-
----
-
-## 💼 Skills Demonstrated
-
-**Technical:** Data integrity (checksums), storage management, macOS administration, bash scripting, backup/recovery procedures, hardware troubleshooting, data recovery
-
-**Process:** Project planning, risk management, documentation, cost optimization, problem-solving under constraints, adapting to hardware failures
+- Securely wipe original drives
+- **Deliverable:** Verified backup system with documented recovery procedures
 
 ---
 
 ## 📊 Current Progress
 
-**Updated:** February 6, 2025 (evening)
+**Updated:** February 10, 2025
 
-**Phase 1 Status:**
-- Drives successfully cataloged: 9 complete
-- Currently cataloging: Drive #10 (in progress)
-- Data indexed: 6.64TB (6,641.81 GB)
-- Cataloging rate: ~0.5-1TB/hour (healthy drives)
-- Oldest data found: 1990s
+### Phase 1 Metrics
 
-**Hardware Issues Encountered:**
-- 1 drive: Failed mid-catalog (read-only, 3 files unrecoverable)
+**Cataloging Status:**
+- Drives cataloged: **12 of 33+** (36% complete)
+- Additional uncounted drives: Pre-2007 archive box (quantity TBD)
+- Data indexed: **14.5TB** (14,525.11 GB)
+- Unique data identified: **2.9TB** (2,900.03 GB)
+- **Duplicate rate: 80%** (11.6TB of duplicates)
+- Date range cataloged: 2007-2018
+- Oldest data found: 2007 (pre-2007 box pending)
+
+**Drive Content Breakdown (12 drives):**
+- Time Machine backups: 1 drive (major contributor to duplicates)
+- Photos: 7 drives (significant overlap suspected)
+- Videos: 2 drives
+- Files: 1 drive
+- Misc: 5 drives (mixed content)
+
+**Remaining Work:**
+- 21+ drives (3TB+ each, newer SSDs - longer catalog times expected)
+- Pre-2007 archive box (quantity and capacity unknown)
+- Estimated remaining data: 40-60TB raw (based on drive sizes)
+
+### Hardware Issues Encountered
+
+**Failure Rate: 30% (3 of 10 initial drives)**
+- 1 drive: Read-only, 3 files unrecoverable
 - 1 drive: Won't connect at all
-- 1 drive: Consistently disconnects during cataloging
-- Total problematic drives: 3 of 10 attempted (30% failure rate)
-
-**Key Findings:**
-- Drive failure rate higher than expected (aging hardware risk)
-- Multiple backup generations discovered (high duplicate likelihood)
-- Overlapping time periods across drives (2010-2015 on 3+ drives)
-- Hardware failures reinforce urgency of this consolidation project
-
-**Next Milestone:** Complete cataloging of accessible drives, document failed drives for data recovery assessment
-
----
-
-## 📖 Repository Structure
-```
-offline-storage-migration/
-├── 01-cataloging/          # Drive inventory methodology
-├── 02-capacity-planning/   # Storage requirement calculations  
-├── 03-deduplication/       # Consolidation workflow
-├── 04-backup-verification/ # Data integrity validation
-└── docs/                   # Tool comparisons, lessons learned
-```
-
-Each phase folder contains detailed documentation, configuration files, and scripts.
-
----
-
-## 💡 Key Learnings (So Far)
-
-**What's Working:**
-- NeoFinder's checksums enable true offline duplicate detection
-- Clear drive labeling during cataloging saves significant time
-- Parallel spreadsheet tracking helps monitor progress and drive health
-
-**Challenges:**
-- **30% hardware failure rate** - higher than anticipated, validates project urgency
-- USB 2.0 drives significantly slower (3-4x longer cataloging time)
-- Mixed file systems require different handling approaches
-- Powered USB hub essential but doesn't solve all connection issues
-- Some drives too degraded for reliable cataloging
-
-**Critical Adaptations:**
-- Immediately backing up failing drives even with incomplete catalogs
-- Documenting which specific files failed for data recovery assessment
-- Prioritizing all remaining uncataloged drives (any could fail next)
-- Accepting some data loss as inevitable with 30-year-old media
-
-**Hardware Failure Lessons:**
-- Read-only errors indicate imminent drive death
-- Consistent disconnects suggest USB controller or power issues
-- Complete connection failure could be drive electronics or enclosure
-- Time is enemy - every delay increases data loss risk
-
----
-
-## 🚀 Future Improvements
-
-- Automate duplicate resolution with smart rules (higher resolution, newer dates)
-- Implement automated backup schedule post-migration
-- Consider NAS solution for network-accessible archive at scale
-- Add selective cloud backup tier for critical files only
-- Budget for professional data recovery services for critical failed drives
-
----
-
-**Project Started:** February 2025  
-**Last Updated:** February 6, 2025 
+- 1 drive: Consistent disconnects during cataloging
+- **Lesson:
